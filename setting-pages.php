@@ -50,7 +50,6 @@ function show_all_words()
     submit_button('Remove');
     echo '</form>';
 
-
     echo '</div>';
 }
 

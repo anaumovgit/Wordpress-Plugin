@@ -11,5 +11,7 @@ register_deactivation_hook(__FILE__, 'manage_deactivation');
 
 require_once(plugin_dir_path(__FILE__) . 'setting-pages.php');
 require_once(plugin_dir_path(__FILE__) . 'activation.php');
+require_once(plugin_dir_path(__FILE__) . 'filter_comments.php');
 
 add_action('admin_menu', 'show_all_words_page');
+add_filter('comments_array', 'censorship_filter');
